@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="login.css">
+        <title>LOGIN</title>
+    </head>
+    
+    <body class="centralize">
+        <form>
+            <div class="form-field">
+                <div><label>E-mail</label></div>
+                <input type="email" name="email" id="email" placeholder="Digite seu@email.com" onchange="onChangeEmail()"/>
+
+            </div>
+            <div class="form-field">
+                <div><label>Senha</label></div>
+                <input type="password" name="password" id="password" placeholder="Senha" onchange="onChangePassword()"/>
+            </div>
+            <div>
+                <button type="button" class="clear" id="recover-password-button" onclick="recoverPassword()" >Recuperar senha</button>
+            </div>
+            <div>
+                <button type="button" class="solid" id="login-button" onclick="login()">Entrar</button>
+            </div>
+        </form>
+    </body>
+    
+    
+    <script src="login.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyAasQSMBXEUWCS2epU35kBxq4yk9KWRbrY",
+            authDomain: "busdoor-dfb06.firebaseapp.com",
+            projectId: "busdoor-dfb06",
+            storageBucket: "busdoor-dfb06.appspot.com",
+            messagingSenderId: "72098808700",
+            appId: "1:72098808700:web:97dc55138f95bd5d6b1af9"
+        };
+        firebase.initializeApp(firebaseConfig);
+
+    </script>    
+    </html>
